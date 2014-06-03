@@ -96,7 +96,125 @@
     <h2> Consonants </h2>
     <?php
       //Constants are like variables except that once they are defined they cannot be changed or undefined.
-      
+      define ("Nitish","Love",true); // what happened here?
+      //unlike var. define is used to declare any constant instead of $(dollar) symbol, it takes 3 parameters....1st constant name, 2nd value of the constant, 3rd (optional) specifies whether name is case insensitive or not by default false that is case sensitive....  okie understood
+       echo niTish; // done
     ?>
+    
+    <h2>Lets fast complete the very easy part of php. i.e . operators </h2>
+    <?php 
+    $x=10; 
+    $y=6;
+    echo "<br/>";
+    echo ($x + $y); // outputs 16
+    echo "<br/>";
+    echo ($x - $y); // outputs 4
+    echo "<br/>";
+    echo ($x * $y); // outputs 60
+    echo "<br/>";
+    echo ($x / $y); // outputs 1.6666666666667
+    echo "<br/>";
+    echo ($x % $y); // outputs 4
+    echo "<br/>";
+        ?>
+    
+    <h2>Some more</h2>
+    <?php 
+    $x=10; 
+    echo "<br/>";
+    echo $x; // outputs 10
+    echo "<br/>";
+    $y=20; 
+    $y += 100;
+    echo $y; // outputs 120
+    echo "<br/>";
+    $z=50;
+    $z -= 25;
+    echo $z; // outputs 25
+    echo "<br/>";
+    $i=5;
+    $i *= 6;
+    echo $i; // outputs 30
+
+    $j=10;
+    $j /= 5;
+    echo"<br/>";
+    echo $j; // outputs 2
+    echo "<br/>";
+    $k=15;
+    $k %= 4;
+    echo $k; // outputs 3
+        ?>
+    
+    <h2> IF ELSE , just a quick review of syntax </h2>
+    <?php
+     $var1 = 10;
+     if ($var1 == 10) {
+       echo "I am awesome.";
+     } 
+      else {
+       echo "you are awesome";
+     }
+     echo "<br/>";
+     $var2 = true;
+      if ($var2 == true) {
+        echo "Nitish loves prerna";
+      } 
+      else {
+        echo "prerna loves nitish";
+      }
+     echo "<br/>";
+    // type a ifelse of your choice below prerna
+    if ($var1!== $var2) 
+      {echo "I understood Identical operator";}
+    else {echo "I need to go through operators lesson again";} // operators are easy , don't worry... ya i understood that
+
+    ?>
+    
+    
+    <!-- Switch case -->
+    
+    <h2> Switch Case </h2>
+    <?php
+
+        $favcolor="red";
+        //very similar to C
+
+        switch ($favcolor) {
+          case "red":
+            echo "Your favorite color is red!";
+            break;
+          case "blue":
+            echo "Your favorite color is blue!";
+            break;
+          case "green":
+            echo "Your favorite color is green!";
+            break;
+          default:
+            echo "Your favorite color is neither red, blue, or green!";
+        }
+
+    ?>
+    
+    <h2> While and dowhile</h2>
+    <?php
+    echo "<br/>";
+    $x=1; 
+
+    do {
+      echo "The number is: $x <br>";
+      $x++;
+    } while ($x<=5);
+
+    $x=1; 
+    echo "<br/>";
+    while($x<=5) {
+      echo "The number is: $x <br>";
+      $x++;
+    }
+
+
+        ?>
+    
     </body>
 </html>
