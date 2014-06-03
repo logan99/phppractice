@@ -45,7 +45,7 @@
     <!-- Please insert a php tag below, so that we can write php code there, prerna-->
     <?php
       // good now let's use string, string is anything that is inside colon 'this is a string' or "this is a stirng"
-      // String variables also start with $ symbols (dollar) all variables start with $ symbol..
+      // String variables also start with $ symbols (dollar), all variables start with $ symbol..
       $nitish = "nitish";
       $prerna = "prerna";
       echo "<br/>" .  $nitish . " loves " . $prerna;
@@ -72,13 +72,31 @@
       // until and unless we don't know if it is an integer, or a string or array, we would not be sure of what operations it allows us to do. 
       // lets try var_dump on array.
       echo "<br/>";
-      $array = array(1, 2, array("a", "b", "c")); // I initialized array as we do in python LOL u did then u r LOL
+      $array = array(1, 2, array("a", "b", "c")); // I initialized array as we do in python LOL, u did then u r LOL
       var_dump($array);
       // Did you get what var_dump does??
       //If u will let me read that then only i will go through na
       // ok read, var_dump is a good function to debug programs.
       //when done ping me.
-
+     
       ?>
+    <h2>String functions </h2>
+    <?php
+     echo "<br/>";
+     echo strlen("prerna");
+     echo "<br/>";
+     echo strlen("Nitish");
+     echo "<br/>";
+     echo strpos("hello world", "world"); // this will find the position of "world" in "hello world"
+     echo "<br/>";
+     $nice = strpos("Nitish loves prerna", "hate"); // as hate is not present it will return -1, but it returned nothing, yes
+     var_dump($nice); // it returned bool false..check by running. So now you would have understood the use of var_dump function. yup, nice
+    ?>
+    
+    <h2> Consonants </h2>
+    <?php
+      //Constants are like variables except that once they are defined they cannot be changed or undefined.
+      
+    ?>
     </body>
 </html>
