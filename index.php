@@ -202,19 +202,86 @@
     $x=1; 
 
     do {
-      echo "The number is: $x <br>";
+      echo "The number is: $x <br/>";
       $x++;
     } while ($x<=5);
 
     $x=1; 
     echo "<br/>";
     while($x<=5) {
-      echo "The number is: $x <br>";
+      echo "The number is: $x <br/>";
       $x++;
     }
-
-
-        ?>
+    ?>
     
+    <h2>For loops </h2>
+    <?php 
+     //For loops
+
+     for($i=0; $i<=10; $i++){
+       echo $i;
+       echo "<br/>";
+     }
+     
+     // now use foreach loopping mechanism. foreach is used to loop for iterative data types such as arrays
+    $looper = array('1','2','3','nitish','loves','prerna');
+    foreach ($looper as $value) {  
+      echo "<br/>" . $value;
+      //value is what? value is a temporary variable that stores the value of each item of the array , one by one..
+    }// for first loop, $value is 1, 2ndloop is 2 and so on. It is used to store the current value of the for loop. and with that instance variable
+// we can perform operations like print, adding etc.
+
+    // try a for each loop yourself.
+    $ary1=array('Hello','1','2','3','learning','Loops');
+    echo "<br/>"; // why you put break here? here i put <br> to change line so that next loop values display in new line, okie..
+    foreach($ary1 as $value)
+        {
+          echo $value;//I wanted to display in single line.
+      }
+     //good work, foreach clear huya?
+     // use foreach only when you have to go through each item in the collection ONCE. it is a very useful function.
+    ?>
+    
+    <br/>  <!-- this is pure html , ya i got it. -->
+    <!-- lets learn fucntions -->
+    
+    <h2> Functions </h2>
+    <?php
+    function writeMsg() {
+      echo "Hello world!";
+    }
+    
+    echo "<br/>";
+    //write a function that takes an argument and prints "hello , argument"
+
+    function helloUser($name){
+        echo $name."<br>";
+      // write the function prerna
+    }
+    
+    helloUser("nitish");
+    helloUser("prerna");
+    writeMsg(); // call the function
+  
+    function fibonacii($limit = 3 ){  //default argument is 3 
+      echo "Fibonacci Series";
+      $count = 0;
+      $i = 0;
+      $j = 1;
+      echo "<br/>". $i . "<br/>".$j."<br/>"; // thanks for fixing the bug
+      echo "Starting to calculate from here . <br/>";
+      while ($count <= $limit ) {
+        $k = $i + $j;
+        echo $k . "<br/>";
+        $i = $j;
+        $j = $k;
+        $count += 1;        
+      }
+    }
+
+    fibonacii(10);
+    fibonacii(5); // working fine.
+    fibonacii(); // default argument will kick in, $limit  is set to 3.
+?>
     </body>
 </html>
