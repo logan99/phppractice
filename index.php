@@ -264,7 +264,7 @@
     writeMsg(); // call the function
   
     function fibonacii($limit = 3 ){  //default argument is 3 
-      echo "Fibonacci Series";
+      echo "<br/> Fibonacci Series Upto " . $new = $limit+3 . " places"; // good job ! looks good and very informative. Can't we add here and display sum?
       $count = 0;
       $i = 0;
       $j = 1;
@@ -283,5 +283,24 @@
     fibonacii(5); // working fine.
     fibonacii(); // default argument will kick in, $limit  is set to 3.
 ?>
+    
+    <h2>Work with Arrays </h2>
+    <?php
+    $cars=array("Volvo","BMW","Toyota",'Oddy also');
+    echo "I like " . $cars[0] . ", " . $cars[1] . " and " . $cars[2] . "," . $cars[3] . ".";
+    ?>
+    
+    <!-- In PHP, there are three types of arrays:
+
+Indexed arrays - Arrays with numeric index
+Associative arrays - Arrays with named keys
+Multidimensional arrays - Arrays containing one or more arrays
+
+--> 
+    <!-- the above example was of indexed arrays --> 
+    
+    <h2> Associative Arrays </h2>
+    
+    
     </body>
 </html>
