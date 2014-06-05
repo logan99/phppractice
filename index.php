@@ -287,7 +287,7 @@
     <h2>Work with Arrays </h2>
     <?php
     $cars=array("Volvo","BMW","Toyota",'Oddy also');
-    echo "I like " . $cars[0] . ", " . $cars[1] . " and " . $cars[2] . "," . $cars[3] . ".";
+    echo "I like " . $cars[0] . ", " . $cars[1] . "," . $cars[2] . " and "  . $cars[3] . ".";
     ?>
     
     <!-- In PHP, there are three types of arrays:
@@ -300,7 +300,68 @@ Multidimensional arrays - Arrays containing one or more arrays
     <!-- the above example was of indexed arrays --> 
     
     <h2> Associative Arrays </h2>
+    <?php
+
+    $age=array("Peter"=>"35","Ben"=>"37","Joe"=>"43");
+    echo "Peter is " . $age['Peter'] . " years old."; // you got this right? ya but y using =>
+    echo "<br/>";
+    ?>
+     
+     <h1>Loop for Associative array</h1>
+        <?php
+    $age=array("Peter" => "35","Ben" => "37","Joe" => "43");
+
+    foreach($age as $key => $value) {  // Now here, as $age is an datatype of key-value pair , we need to use two set of temporary variable i.e.
+       // $x for the key and $x_value for the value of the key. I am not getting the meaning of =>.... i previous case also , => means that the key 
+       // has value , the key is on the left side and the value is on the right side
+       // this is similar to dictionary data-type in .NET., , , => is used for syntactical purposes only on w3schools where is its documentation
+      echo "Key=" . $key . ", Value=" . $value;
+      echo "<br>";
+    }   
+    ?>
     
+    <h3> Sorting Arrays </h3>
+    
+    <?php
+    $arr = array('100','25','13','47','59','6'); //:P lol
+    shuffle($arr); // ye lo lol phla to galat likha tha na lol :P :P, shuffle karne sei hi hota wo tum pahla ni kiya tha aur mujjha ya function ni pata tha
+    echo "<br/> Ascending order <br/>";
+    sort($arr); // ascending sort
+    foreach($arr as $num)
+      echo $num . " ";// ak line ma hi display karwata hai
+        echo "<br/>";
+    shuffle($arr);
+    echo "<br/> Descendinging order <br/>";
+    rsort($arr); //descending sort
+    foreach($arr as $num)
+      echo $num . " ";
+    echo "<br>";
+    //shuffle($arr); Is it needed?
+
+    echo "<br/> Associative Array in Ascending order <br/>";
+    $age=array("Peter"=>"35","Ben"=>"37","Joe"=>"43");
+    shuffle($age);
+    asort($age);  // sorts an associative array in ascending order, according to the value:
+     foreach($age as $num)
+      echo $num . " ";
+    shuffle($age);
+    ksort($age); //  sorts an associative array in ascending order, according to the key:
+    foreach($age as $num)
+      echo $num . " ";
+    echo "<br>";
+
+    shuffle($age);
+    arsort($age); // sorts an associative array in descending order, according to the value:
+    foreach($age as $num)
+      echo $num . " ";
+    echo "<br>";
+
+    shuffle($age);
+    krsort($age);  // sorts an associative array in descending order, according to the key
+     foreach($age as $num)
+      echo $num . " ";
+    echo "<br>";
+    ?>
     
     </body>
 </html>
