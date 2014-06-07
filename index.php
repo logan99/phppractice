@@ -325,43 +325,92 @@ Multidimensional arrays - Arrays containing one or more arrays
     <?php
     $arr = array('100','25','13','47','59','6'); //:P lol
     shuffle($arr); // ye lo lol phla to galat likha tha na lol :P :P, shuffle karne sei hi hota wo tum pahla ni kiya tha aur mujjha ya function ni pata tha
+
     echo "<br/> Ascending order <br/>";
+
     sort($arr); // ascending sort
     foreach($arr as $num)
-      echo $num . " ";// ak line ma hi display karwata hai
+      echo $num . ", ";// ak line ma hi display karwata hai
         echo "<br/>";
+
+
     shuffle($arr);
+
     echo "<br/> Descendinging order <br/>";
+
     rsort($arr); //descending sort
     foreach($arr as $num)
-      echo $num . " ";
+      echo $num . ", ";
     echo "<br>";
     //shuffle($arr); Is it needed?
 
-    echo "<br/> Associative Array in Ascending order <br/>";
+    echo "<br/> Associative Array in Ascending order by value <br/>";
+
     $age=array("Peter"=>"35","Ben"=>"37","Joe"=>"43");
+
+
     shuffle($age);
+
     asort($age);  // sorts an associative array in ascending order, according to the value:
-     foreach($age as $num)
-      echo $num . " ";
+     foreach($age as $key => $value) // yaha pe galit tha, semantic error
+      echo $value . ", ";
+
+    
+    echo "<br/> Associative Array in Ascending order by Key value <br/>";
+
     shuffle($age);
+
+
     ksort($age); //  sorts an associative array in ascending order, according to the key:
-    foreach($age as $num)
-      echo $num . " ";
+    foreach($age as $key => $value)
+      echo $key . ", ";
     echo "<br>";
 
+    echo "<br/> Associative Array in Descending order by value <br/>";
+
     shuffle($age);
+
     arsort($age); // sorts an associative array in descending order, according to the value:
-    foreach($age as $num)
-      echo $num . " ";
+    foreach($age as $key => $value)
+      echo $value . ", ";
     echo "<br>";
 
+    echo "<br/> Associative Array in Descending order by key value <br/>";
+
     shuffle($age);
+
     krsort($age);  // sorts an associative array in descending order, according to the key
-     foreach($age as $num)
-      echo $num . " ";
+     foreach($age as $key => $value)
+      echo $key . ", ";
     echo "<br>";
     ?>
     
+    <h2> Understanding SuperGlobals </h2>
+    <?php 
+    $x = 75; 
+    $y = 25;
+
+    function addition() { 
+      $GLOBALS['z'] = $GLOBALS['x'] + $GLOBALS['y']; 
+    }
+
+    addition(); 
+    echo $z; 
+    // $_SERVER is also a GLOBAL VARIABLE, that means it is avialable for the whole scope throughout the life of the web applciation.
+    //$_SERVER stores all the information about the server. We can dereference it by passing the variable name into the $_SERVER
+    // and it will output the desired results
+    // As $_SERVER is server dependent, the values will change from server to server
+    echo $_SERVER['PHP_SELF']; // refers to itself
+    echo "<br>";
+    echo $_SERVER['SERVER_NAME']; // the server name on which the php script is running
+    echo "<br>";
+    echo $_SERVER['HTTP_HOST']; //
+    echo "<br>";
+    echo $_SERVER['HTTP_REFERER'];
+    echo "<br>";
+    echo $_SERVER['HTTP_USER_AGENT']; // this variable tells which client(browser) has requested for resources from the server
+    echo "<br>";
+    echo $_SERVER['SCRIPT_NAME'];
+    ?>
     </body>
 </html>
