@@ -4,6 +4,17 @@
   <head></head>
   
   <body>
+    <!-- THis is a form to take user input-->
+     <h2>Today, we are going to start form handling </h2>
+    <form action="Form1.php" method="post">  <!--See the action and method attributes -->
+    Name: <input type="text" name="name"><br> <!-- This is simple input element , used to take user input -->
+    E-mail: <input type="text" name="email"><br> <!-- This is email input element, used to take user email -->
+    <!-- Also notice name attribute name ="email" or name = "name", they are used as variables to store user information and used by server to process information -->
+    <input type="submit"> <!-- This is sample submit button-->
+    <input type="reset"> <!-- This is sample reset button -->
+    </form>
+    
+    
     <?php
     # this is a comment
     /* This is multiple line comment like in c
@@ -412,5 +423,8 @@ Multidimensional arrays - Arrays containing one or more arrays
     echo "<br>";
     echo $_SERVER['SCRIPT_NAME'];
     ?>
+    
+
+     
     </body>
 </html>
