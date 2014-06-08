@@ -7,11 +7,12 @@
     <!-- THis is a form to take user input-->
      <h2>Today, we are going to start form handling </h2>
     <form action="Form1.php" method="post">  <!--See the action and method attributes -->
-    Name: <input type="text" name="name"><br> <!-- This is simple input element , used to take user input -->
-    E-mail: <input type="text" name="email"><br> <!-- This is email input element, used to take user email -->
+    First Name: <input type="text" name="name"><br> <!-- This is simple input element , used to take user input  Name is what here-->
+    E-mail: <input type="text" name="pemail"><br> <!-- This is email input element, used to take user email E-mail is what?, email is the name of the variale you choose , this variable is used by server for processing. -->
     <!-- Also notice name attribute name ="email" or name = "name", they are used as variables to store user information and used by server to process information -->
-    <input type="submit"> <!-- This is sample submit button-->
-    <input type="reset"> <!-- This is sample reset button -->
+    PSex: <input type="text" name="gender"><br> <!-- this are shown to user, telling them what to enter. change it to see the difference-->
+    <input type="submit"> <!-- This is simple submit button-->
+    <input type="reset"> <!-- This is simple reset button -->
     </form>
     
     
